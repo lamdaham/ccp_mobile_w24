@@ -1,0 +1,136 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Lighter background for overall page */
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF; /* Blue color for links */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333; /* Darker background for contrast */
+    text-align: center;
+    overflow: hidden;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    padding: 14px 16px;
+    color: white;
+    font-size: 18px; /* Adjusted for mobile friendliness */
+}
+
+nav ul li a.active, nav ul li a:hover {
+    background-color: #117A65; /* Highlight color for active/hover state */
+    color: white;
+}
+
+/* Skip Link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #000;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+    background-color: #117A65; /* Make skip link clearly visible when focused */
+}
+
+/* Grid Layout */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #e9ecef; /* Light grey background for photo gallery */
+    border-radius: 8px; /* Optional: adds rounded corners to the photo gallery */
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: 200px; /* Ensure uniform image height */
+    object-fit: cover;
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    max-height: 600px; /* Limiting height for large images */
+}
+
+/* Enhancements for Readability and Spacing */
+main {
+    background-color: #ffffff; /* White background for main content area */
+    padding: 20px; /* Spacing around main content */
+    border-radius: 8px; /* Optional: adds rounded corners to the main content area */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Adds a subtle shadow for depth */
+    margin: 20px; /* Adds margin around the main content for separation from the edges */
+}
+
+section {
+    background-color: #f8f9fa; /* Slightly off-white for sections within main */
+    padding: 20px; /* Padding within sections for spacing */
+    margin-bottom: 20px; /* Separation between sections */
+    border-radius: 8px; /* Rounded corners for sections */
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block; /* Stack navigation items on smaller screens */
+    }
+
+    .photo-gallery {
+        grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    }
+
+    h1, h2 {
+        font-size: 1.5em; /* Adjusting heading sizes for readability */
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+.photo-gallery-pets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Creates a responsive grid */
+    gap: 20px; /* Space between images */
+    padding: 20px; /* Padding around the entire gallery */
+}
+
+.photo-gallery-pets img {
+    width: 100%; /* Makes images stretch to fill their grid area */
+    height: auto; /* Maintains the aspect ratio of the images */
+    object-fit: cover; /* Ensures the images cover their area without distorting */
+}
+
